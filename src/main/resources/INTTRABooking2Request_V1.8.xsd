@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSpy v2012 (x64) (http://www.altova.com) by Terra Technology (Terra Technology) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.inttra.com/booking/services/01" targetNamespace="http://xml.inttra.com/booking/services/01" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation><![CDATA[
+            Copyright © 2009 by INTTRA, Inc
+
+            In response to Customer's request, INTTRA has provided Customer this copy of the
+            INTTRA XML Schema definition file and resulting XML file
+            (collectively, the "XML Schema Files") solely for Customer's internal use, and
+            for the sole purpose of assisting Customer to expedite the construction and testing of
+            Customer XML files for use with the INTTRA Portal. Customer agrees to include the
+            INTTRA copyright notice on any copies of the XML Schema File to be made by
+            Customer for this purpose. Any copying, use or distribution of all or any portion of the Schema,
+            except as expressly authorized by INTTRA, is a violation of the INTTRA copyright.
+
+
+            INTTRA DISCLAIMER. Customer acknowledges that the XML Schema Files are an approximate,
+            and not an actual, reproduction of the schema utilized in Booking 2 Link (XML)
+            and that INTTRA is providing the XML Schema Files to Customer, 
+            at no charge, solely to facilitate Customer's integration with the INTTRA Portal. 
+            Customer acknowledges that use of the XML Schema Files
+            is not a requirement for integrating with the INTTRA Portal and that such use
+            is at its sole option.  INTTRA DISCLAIMS ALL WARRANTIES WITH RESPECT TO THE XML SCHEMA
+            FILES, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF
+            MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. INTTRA DOES NOT WARRANT THAT
+            CUSTOMER'S USE OF THE XML SCHEMA FILES WILL BE CORRECT OR ERROR-FREE, OR THAT SUCH FILES
+            WILL NOT REQUIRE FUTURE MODIFICATIONS OR WILL BE WORKABLE IN ANY APPLICATION, OR OTHERWISE.
+            THE XML SCHEMA FILES ARE PROVIDED ON AN "AS IS" BASIS, AND CUSTOMER'S USE OF THE XML SCHEMA
+            FILES IS AT ITS OWN RISK. IN NO EVENT WILL INTTRA BE LIABLE FOR ANY DAMAGES, WHETHER DIRECT
+            OR INDIRECT, IN CONNECTION WITH CUSTOMER'S USE OF THE XML SCHEMA FILES.
+            ]]></xsd:documentation>
+	</xsd:annotation>
+	<xsd:simpleType name="StringCommentType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="512"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringCodeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringTextType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringNumberValueType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String10CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String4CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMax4CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMax5CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMax17CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMax35CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String7CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin4Max4CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="4"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin0Max256CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="256"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin0Max17CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin1Max1024CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="1024"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin2Max2CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="2"/>
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringMin2Max70CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="2"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String70CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String6CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Int5Type">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="99999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Int8Type">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Int15Type">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="999999999999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String210CharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="210"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StringRegexCharType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z0-9]{2,17}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TransactionTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>
+                INTTRA Transaction Types.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Booking"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="InstructionCategoryValues">
+		<xsd:annotation>
+			<xsd:documentation>Comment and Instruction categories</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="GeneralHazmatComments"/>
+			<xsd:enumeration value="RadioactiveGoodsAdditionalInstructions"/>
+			<xsd:enumeration value="RegulatoryInformation"/>
+			<xsd:enumeration value="HazmatPlacardInformation"/>
+			<xsd:enumeration value="GeneralEquipmentComments"/>
+			<xsd:enumeration value="TemperatureControlInstructions"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PartyTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>
+                Party Types (Transaction Roles).
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Carrier"/>
+			<xsd:enumeration value="Consignee"/>
+			<xsd:enumeration value="Shipper"/>
+			<xsd:enumeration value="ContractParty"/>
+			<xsd:enumeration value="FreightPayer"/>
+			<xsd:enumeration value="Forwarder"/>
+			<xsd:enumeration value="MessageRecipient"/>
+			<xsd:enumeration value="FirstAdditionalNotifyParty"/>
+			<xsd:enumeration value="SecondAdditionalNotifyParty"/>
+			<xsd:enumeration value="MainNotifyParty"/>
+			<xsd:enumeration value="Booker"/>
+			<xsd:enumeration value="ShipFromDoor">
+				<xsd:annotation>
+					<xsd:documentation>Equipment Level Operational Entity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ShipToDoor">
+				<xsd:annotation>
+					<xsd:documentation>Equipment Level Operational Entity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Subcontractor"/>
+			<xsd:enumeration value="IntermediateStopOff">
+				<xsd:annotation>
+					<xsd:documentation>Equipment Level Operational Entity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EmptyPickUp">
+				<xsd:annotation>
+					<xsd:documentation>Equipment Level Operational Entity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PartyIdentifierTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Identifiers supplied for Parties.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="INTTRACompanyID">
+				<xsd:annotation>
+					<xsd:documentation>Unique Company Identifier assigned by INTTRA.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DUNSNumber">
+				<xsd:annotation>
+					<xsd:documentation>DUNS Number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PassThroughCode">
+				<xsd:annotation>
+					<xsd:documentation>Code Identified as 'Pass Through' by Transaction Submitter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PartnerAlias">
+				<xsd:annotation>
+					<xsd:documentation>Identifier Alias registered by Partner with INTTRA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SCAC">
+				<xsd:annotation>
+					<xsd:documentation>Standard Carrier Alpha Code.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ContactTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Type of Contact Entity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="InformationContact">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NotificationContact">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HazardousMaterialsContact">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EquipmentContact">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ConveyanceTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Type of Conveyance used to transport cargo.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="ContainerShip"/>
+			<xsd:enumeration value="OceanVessel"/>
+			<xsd:enumeration value="Ship"/>
+			<xsd:enumeration value="Rail"/>
+			<xsd:enumeration value="Road"/>
+			<xsd:enumeration value="Barge"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ConveyanceIdentifierTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Schemes used to Identify Conveyances.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="LloydsCode">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VesselName">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VoyageNumber">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ConveyanceOperatorIDTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Schemes used to Identify Conveyance Operators.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="SCACCode">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Categories of Operational and Contract Locations.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="PortOfLoad">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PortOfDischarge">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PlaceOfDelivery"/>
+			<xsd:enumeration value="PlaceOfReceipt"/>
+			<xsd:enumeration value="BookingOffice"/>
+			<xsd:enumeration value="ProhibitedTransshipmentLocation"/>
+			<xsd:enumeration value="RequestedTransshipmentLocation"/>
+			<xsd:enumeration value="PlaceOfPayment">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PrepaidChargeLocation"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationIdentifierTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Codes used to Identify Locations.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="UNLOC">
+				<xsd:annotation>
+					<xsd:documentation>5 Character UN Location Code (ISO 3661).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PartnerAlias">
+				<xsd:annotation>
+					<xsd:documentation>Location Alias registered by Partner with INTTRA.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RegulatoryShipmentIDTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Codes used to Identify Locations.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="CCN">
+				<xsd:annotation>
+					<xsd:documentation>Canadian Cargo Control Number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UCR">
+				<xsd:annotation>
+					<xsd:documentation>UK Unique Consignment Number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FilingProgramValues">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="AMS"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ChargeTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Supported Charge Types.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="OriginTerminalHandling"/>
+			<xsd:enumeration value="DestinationTerminalHandling"/>
+			<xsd:enumeration value="OceanFreight"/>
+			<xsd:enumeration value="AdditionalCharges"/>
+			<xsd:enumeration value="DestinationHaulageCharges"/>
+			<xsd:enumeration value="OriginHaulageCharges"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ChargePaymentTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Types of Charge Payment Arrangements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="PrePaid">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Collect">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ThirdParty">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CommodityClassificationTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Schedules of Commodity Classifications.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="USHTS">
+				<xsd:annotation>
+					<xsd:documentation>US Harmonized Tariff Schedule.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SchedB">
+				<xsd:annotation>
+					<xsd:documentation>US Schedule B (Export).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CodeListResponsibleAgency">
+		<xsd:annotation>
+			<xsd:documentation>Agencies Responsible for code list</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="IMO"/>
+			<xsd:enumeration value="UNECE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="WeightUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Weight.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="KGM"/>
+			<xsd:enumeration value="LBS"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="GasLiquidVolumeUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Gas Liquid Volume.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="FTQ"/>
+			<xsd:enumeration value="MTQ"/>
+			<xsd:enumeration value="GAL"/>
+			<xsd:enumeration value="LTR"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="VolumeUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Volume.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="CBM"/>
+			<xsd:enumeration value="CFT"/>
+			<xsd:enumeration value="FTQ"/>
+			<xsd:enumeration value="MTQ"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TemperatureUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Temperature.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="CEL"/>
+			<xsd:enumeration value="FAH"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AirFlowUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Air flow.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="CBM"/>
+			<xsd:enumeration value="CBF"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ControlledAtmosphereGasValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Gas Unit types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CarbonDioxide"/>
+			<xsd:enumeration value="Nitrogen"/>
+			<xsd:enumeration value="Oxygen"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ControlledAtmosphereGasUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Gas.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Percent"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RadioactivityUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Radioactivity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="MegaBecquerels"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SolutionConcentrationUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Concentration.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="PercantageOfAcidvsWater"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="HumidityUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Humidity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="PercentOfMoistureInAir"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DimensionUOMValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Dimension.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Feet"/>
+			<xsd:enumeration value="Meter"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DimensionUOMValues2">
+		<xsd:annotation>
+			<xsd:documentation>Set of Units of Measure for Dimension.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Feet"/>
+			<xsd:enumeration value="Meter"/>
+			<xsd:enumeration value="Centimeter"/>
+			<xsd:enumeration value="Inch  "/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ISOCountryCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple ISO 3166 2 Character Country Code Validation Pattern.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ISOContainerCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple ISO 6346 4 Character Container Size/Type Code Validation Pattern.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z0-9]{4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="UNPackageCodeType">
+		<xsd:simpleContent>
+			<xsd:annotation>
+				<xsd:documentation>Simple Un ECE Recommendation 21, Rev 6 {2 or 3} Character Package Type Code Validation Pattern.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="StringRegexCharType">
+				<xsd:attribute name="type" type="CodeListResponsibleAgency"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="TransportModeTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Type of Transport Mode.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="MaritimeTransport"/>
+			<xsd:enumeration value="RailTransport"/>
+			<xsd:enumeration value="RoadTransport"/>
+			<xsd:enumeration value="InlandWaterTransport"/>
+			<xsd:enumeration value="Rail/WaterTransport"/>
+			<xsd:enumeration value="Rail/RoadTransport"/>
+			<xsd:enumeration value="Road/WaterTransport"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RegulatoryShipmentIDType2Values">
+		<xsd:restriction base="RegulatoryShipmentIDTypeValues">
+			<xsd:enumeration value="CCN"/>
+			<xsd:enumeration value="UCR"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationDateTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Date Types for Location .</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="LatestDelivery"/>
+			<xsd:enumeration value="EarliestDeparture"/>
+			<xsd:enumeration value="EstimatedArrival"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="EqPartyDateTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Date Types for Equipment Party .</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ReqstDeliveryDateFullCont"/>
+			<xsd:enumeration value="ReqstPositionDateEmptyContAtDoor"/>
+			<xsd:enumeration value="ReqstPickUpDateAtStopOff"/>
+			<xsd:enumeration value="ReqstPickUpOfEmptyCont"/>
+			<xsd:enumeration value="ReqstPositionDateAtStopOff"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ReferenceInformationDateTypeValues">
+		<xsd:annotation>
+			<xsd:documentation>Set of Date Types for Reference .</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ExpiryDate"/>
+			<xsd:enumeration value="IssueDate"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ReferenceTypeValues">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="FreightTariffNumber"/>
+			<xsd:enumeration value="ContractPartyReferenceNumber"/>
+			<xsd:enumeration value="OutboundBookingAgentRefNumber"/>
+			<xsd:enumeration value="VehicleIdentificationNumber"/>
+			<xsd:enumeration value="ConsigneeReferenceNumber"/>
+			<xsd:enumeration value="BillOfLadingNumber"/>
+			<xsd:enumeration value="BookingNumber"/>
+			<xsd:enumeration value="LocalBookingNumber"/>
+			<xsd:enumeration value="ContractNumber"/>
+			<xsd:enumeration value="FreightForwarderRefNumber"/>
+			<xsd:enumeration value="ContractLineItemNumber"/>
+			<xsd:enumeration value="PurchaseOrderNumber"/>
+			<xsd:enumeration value="ContainerReleaseNumber"/>
+			<xsd:enumeration value="ShipperReferenceNumber"/>
+			<xsd:enumeration value="INTTRAReferenceNumber"/>
+			<xsd:enumeration value="StockKeepingUnit"/>
+			<xsd:enumeration value="InternalTransactionNumber"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StowageInstructionsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="AboveDeck"/>
+			<xsd:enumeration value="BelowDeck"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PackingGroupCodeValues">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="GreatDanger"/>
+			<xsd:enumeration value="MediumDanger"/>
+			<xsd:enumeration value="MinorDanger"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MarinePollutantStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="NotMarinePollutant"/>
+			<xsd:enumeration value="MarinePollutant"/>
+			<xsd:enumeration value="SevereMarinePollutant"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AggregationStateType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Solid"/>
+			<xsd:enumeration value="Liquid"/>
+			<xsd:enumeration value="Gas"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NatureOfCargoType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="EnvironmentalPollutant"/>
+			<xsd:enumeration value="Hazardous"/>
+			<xsd:enumeration value="NonContainerized"/>
+			<xsd:enumeration value="TemperatureControlled"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SpecialServiceRequestType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="EquipmentCleanRequested"/>
+			<xsd:enumeration value="FoodGradeEquipmentRequest"/>
+			<xsd:enumeration value="EquipmentSweepRequested"/>
+			<xsd:enumeration value="FumigationRequired"/>
+			<xsd:enumeration value="GarmentOnHanger"/>
+			<xsd:enumeration value="HeavyWeightEquipment"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MovementTypeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="DoorToDoor"/>
+			<xsd:enumeration value="DoorToPort"/>
+			<xsd:enumeration value="PortToPort"/>
+			<xsd:enumeration value="PortToDoor"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="GrossWeightType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="WeightUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="GrossVolumeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="VolumeUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="HumidityType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="HumidityUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AirFlowType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="AirFlowUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ControlledAtmosphereType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="Gas" type="ControlledAtmosphereGasValues" use="required"/>
+				<xsd:attribute name="UOM" type="ControlledAtmosphereGasUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="DimensionsType">
+		<xsd:sequence>
+			<xsd:element name="Length" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="Width" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="Height" type="xsd:decimal" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="UOM" type="DimensionUOMValues" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="DimensionsType2">
+		<xsd:sequence>
+			<xsd:element name="Length" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="Width" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="Height" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="NumberOfTransportableUnits" type="Int15Type" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="UOM" type="DimensionUOMValues2" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TemperatureType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="TemperatureUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="CommodityClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Commodity Classification Structure.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Type" type="CommodityClassificationTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="GasLiquidVolumeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="GasLiquidVolumeUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="RadioactivityType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="RadioactivityUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="SolutionConcentrationType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="UOM" type="SolutionConcentrationUOMValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="LocationIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Structure for Location Identification.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Type" type="LocationIdentifierTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PartyIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Structure for Party Identification.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Type" type="PartyIdentifierTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConveyanceIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Structure for Conveyance Identification.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Type" type="ConveyanceIdentifierTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConveyanceOperatorIDType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Structure for Conveyance Operator Identification.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Type" type="ConveyanceOperatorIDTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="FilingStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+                Structure to Record Filing Status at a Jurisdiction Point.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Filer">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="NotCarrier"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="FilingProgram" type="FilingProgramValues" minOccurs="0"/>
+			<xsd:element name="FilerID" type="PartyIdentifierType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyAddressType">
+		<xsd:sequence>
+			<xsd:element name="StreetAddress" type="String210CharType" minOccurs="0"/>
+			<xsd:element name="CityName" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Subdivision" type="StringMin2Max2CharType" minOccurs="0"/>
+			<xsd:element name="PostalCode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CountryCode" type="ISOCountryCodeType" minOccurs="0"/>
+			<xsd:element name="CountryName" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PrepaidCollectorType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="PrepaidorCollectIndicator" type="ChargePaymentTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ChargeCategoryType">
+		<xsd:sequence>
+			<xsd:element name="PrepaidCollector" type="PrepaidCollectorType"/>
+			<xsd:element name="ChargeLocation" type="ChargeLocationType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="ChargeType" type="ChargeTypeValues" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ChargeLocationType">
+		<xsd:complexContent>
+			<xsd:extension base="LocationBaseType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="HazardousContactInformationType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="ContactTypeValues"/>
+			<xsd:element name="Name" type="StringTextType"/>
+			<xsd:element name="CommunicationDetails" type="HazardousCoordinatesType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentContactInformationType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="ContactTypeValues"/>
+			<xsd:element name="Name" type="StringTextType"/>
+			<xsd:element name="CommunicationDetails" type="CoordinatesType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactInformationType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="ContactTypeValues"/>
+			<xsd:element name="Name" type="StringTextType"/>
+			<xsd:element name="CommunicationDetails" type="CoordinatesType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Create a BK2 specific ContactCoordinateType without WebSite.-->
+	<xsd:complexType name="CoordinatesType">
+		<xsd:sequence>
+			<xsd:element name="Phone" type="StringCommentType" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="Fax" type="StringCommentType" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="Email" minOccurs="0" maxOccurs="9">
+				<xsd:simpleType>
+					<xsd:restriction base="StringCommentType">
+						<xsd:pattern value="([\.a-zA-Z0-9_\-])+@([a-zA-Z0-9_\-])+(([a-zA-Z0-9_\-])*\.([a-zA-Z0-9_\-])+)+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HazardousCoordinatesType">
+		<xsd:sequence>
+			<xsd:element name="Phone" type="StringCommentType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CustomsDeclarationInformationType">
+		<xsd:sequence>
+			<xsd:element name="CustomsDeclarationInfoValue" type="StringCommentType"/>
+		</xsd:sequence>
+		<xsd:attribute name="Type" type="RegulatoryShipmentIDType2Values" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="LocationDateType">
+		<xsd:simpleContent>
+			<xsd:extension base="DateTimeCodeType">
+				<xsd:attribute name="DateType" type="LocationDateTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="EqPartyDateTimeCodeType">
+		<xsd:simpleContent>
+			<xsd:extension base="DateTimeCodeType">
+				<xsd:attribute name="DateType" type="EqPartyDateTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ReferenceInformationDateType">
+		<xsd:simpleContent>
+			<xsd:extension base="DateTimeCodeType">
+				<xsd:attribute name="DateType" type="ReferenceInformationDateTypeValues" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ReferenceInformationType">
+		<xsd:sequence>
+			<xsd:element name="Value" type="StringTextType"/>
+		</xsd:sequence>
+		<xsd:attribute name="Type" type="ReferenceTypeValues" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ExportLicenseType">
+		<xsd:sequence>
+			<xsd:element name="Value" type="StringTextType"/>
+			<xsd:element name="DateTime" type="ReferenceInformationDateType" minOccurs="0" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentDetailsType">
+		<xsd:sequence>
+			<xsd:element name="EquipmentIdentifier" type="EquipmentIdentifierTypeWithLength" minOccurs="0"/>
+			<xsd:element name="EquipmentType" type="EquipmentTypeType"/>
+			<xsd:element name="NumberOfEquipment" type="Int15Type"/>
+			<xsd:element name="ImportExportHaulage" type="ImportExportHaulageType"/>
+			<xsd:element name="EquipmentGrossWeight" type="GrossWeightType" minOccurs="0"/>
+			<xsd:element name="EquipmentGrossVolume" type="GrossVolumeType" minOccurs="0"/>
+			<xsd:element name="EquipmentHumidity" type="HumidityType" minOccurs="0"/>
+			<xsd:element name="EquipmentAirFlow" type="AirFlowType" minOccurs="0"/>
+			<xsd:element name="EquipmentGasLevel" type="ControlledAtmosphereType" minOccurs="0" maxOccurs="3"/>
+			<xsd:element name="EquipmentDetailsDimensions" type="DimensionsType" minOccurs="0"/>
+			<xsd:element name="NonActiveReefer" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="EquipmentTemperature" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="SpecialHandling" type="TemperatureControlInstructionsType" minOccurs="0"/>
+			<xsd:element name="EquipmentComments" type="InstructionTypeType" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="CustomsDeclarationInformation" type="CustomsDeclarationInformationType" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="StowageInstructions" type="StowageInstructionsType" minOccurs="0"/>
+			<xsd:element name="SpecialServiceRequest" type="SpecialServiceRequestType" minOccurs="0" maxOccurs="6"/>
+			<xsd:element name="EquipmentReferenceInformation" type="EquipmentReferenceInformationType" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="EquipmentParty" type="EquipmentPartyType" minOccurs="0" maxOccurs="9"/>
+			<!-- Added for DGS Changes DEC-2022 - START-->
+			<xsd:element name="TypeAndAmountOfFumigant" type="StringMax35CharType" minOccurs="0" />
+			<xsd:element name="FumigationDateAndTime" type="DateTimeCodeType" minOccurs="0" />
+			<!-- Added for DGS Changes DEC-2022 - END-->
+		</xsd:sequence>
+		<xsd:attribute name="EquipmentSupplier">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="ShipperSupplied"/>
+					<xsd:enumeration value="CarrierSupplied"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="FullEmptyIndicator">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Empty"/>
+					<xsd:enumeration value="Full"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentReferenceInformationType">
+		<xsd:sequence>
+			<xsd:element name="Value" type="StringTextType"/>
+		</xsd:sequence>
+		<xsd:attribute name="Type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="CustomerLoadPreference"/>
+					<xsd:enumeration value="PurchaseOrderNumber"/>
+					<xsd:enumeration value="VehicleIdentificationNumber"/>
+					<xsd:enumeration value="ContainerReleaseNumber"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ImportExportHaulageType">
+		<xsd:sequence>
+			<xsd:element name="CargoMovementType" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="FCL/FCL"/>
+						<xsd:enumeration value="FCL/LCL"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="HaulageArrangements">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="CarrierExportHaulageCarrierImportHaulage"/>
+						<xsd:enumeration value="CarrierExportHaulageMerchantImportHaulage"/>
+						<xsd:enumeration value="MerchantExportHaulageCarrierImportHaulage"/>
+						<xsd:enumeration value="MerchantExportHaulageMerchantImportHaulage"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentTypeType">
+		<xsd:sequence>
+			<xsd:element name="EquipmentTypeCode" type="ISOContainerCodeType"/>
+			<xsd:element name="EquipmentDescription" type="StringTextType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="GoodsDetailsType">
+		<xsd:sequence>
+			<xsd:element name="LineNumber" type="Int5Type"/>
+			<xsd:element name="PackageDetail" type="PackageDetailType"/>
+			<xsd:element name="CommodityClassification" type="CommodityClassificationType" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="GoodDescription" type="StringMin1Max1024CharType"/>
+			<xsd:element name="CustomsDeclarationInformation" type="CustomsDeclarationInformationType" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="OutOfGaugeDimensions" type="DimensionsType" minOccurs="0"/>
+			<xsd:element name="TransportableUnitDimensions" type="DimensionsType2" minOccurs="0"/>
+			<xsd:element name="DetailsReferenceInformation" type="ReferenceInformationType" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="ExportLicense" type="ExportLicenseType" minOccurs="0"/>
+			<xsd:element name="PackageMarks" minOccurs="0" maxOccurs="9">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Marks" minOccurs="0" maxOccurs="10">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:minLength value="1"/>
+									<xsd:maxLength value="35"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SplitGoodsDetails" type="SplitGoodsDetailsType" minOccurs="0" maxOccurs="999"/>
+			<xsd:element name="HazardousGoods" type="HazardousGoodsType" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HaulageDetailsType">
+		<xsd:attribute name="MovementType" type="MovementTypeType" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="HazardousGoodsType">
+		<xsd:sequence>
+			<xsd:element name="IMOClassCode" type="String7CharType" maxOccurs="3"/>
+			<xsd:element name="IMDGPageNumber" type="String7CharType" minOccurs="0"/>
+			<xsd:element name="HazardCodeVersionNumber" type="String10CharType" minOccurs="0"/>
+			<xsd:element name="PackingGroupCode" type="PackingGroupCodeValues" minOccurs="0"/>
+			<xsd:element name="UNDGNumber" type="String4CharType"/>
+			<xsd:element name="FlashpointTemperature" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="EMSNumber" type="String6CharType" minOccurs="0"/>
+			<xsd:element name="TremCardNumber" type="String10CharType" minOccurs="0"/>
+			<xsd:element name="ProperShippingName" type="StringCommentType"/>
+			<xsd:element name="TransportInLimitedQuantities" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="TechnicalName" type="StringCommentType" minOccurs="0"/>
+			<xsd:element name="EmptyUncleanedReceptacle" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="MarinePollutantStatus" type="MarinePollutantStatusType" minOccurs="0"/>
+			<xsd:element name="InhalantHazard" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="AggregationState" type="AggregationStateType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsComments" type="InstructionTypeType" minOccurs="0" maxOccurs="4"/>
+			<xsd:element name="IntermedBulkContainerCode" type="StringCommentType" minOccurs="0"/>
+			<xsd:element name="EmergencyResponseContact" type="HazardousContactInformationType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsWeight" type="GrossWeightType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsVolume" type="GasLiquidVolumeType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsRadioactivity" type="RadioactivityType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsAcidConcentrtn" type="SolutionConcentrationType" minOccurs="0"/>
+			<xsd:element name="HazardousGoodsSplitDetails" type="SplitGoodsDetailsType" minOccurs="0" maxOccurs="999"/>
+			<!-- Added for DGS Changes DEC-2022 - START-->
+			<xsd:element name="UNNumberVariant" type="StringMax4CharType" minOccurs="0"/>
+			<xsd:element name="IsWaste" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="IsHot" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="SAPT" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="SADT" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="EmergencyTemperature" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="ControlTemperature" type="TemperatureType" minOccurs="0"/>
+			<xsd:element name="EndOfHoldingTime" type="DateTimeCodeType" minOccurs="0"/>
+			<xsd:element name="ExceptedQuantity" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="E0"/>
+						<xsd:enumeration value="E1"/>
+						<xsd:enumeration value="E2"/>
+						<xsd:enumeration value="E3"/>
+						<xsd:enumeration value="E4"/>
+						<xsd:enumeration value="E5"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="SegregationGroup" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="None"/>
+						<xsd:enumeration value="SGG1"/>
+						<xsd:enumeration value="SGG1a"/>
+						<xsd:enumeration value="SGG2"/>
+						<xsd:enumeration value="SGG3"/>
+						<xsd:enumeration value="SGG4"/>
+						<xsd:enumeration value="SGG5"/>
+						<xsd:enumeration value="SGG6"/>
+						<xsd:enumeration value="SGG7"/>
+						<xsd:enumeration value="SGG8"/>
+						<xsd:enumeration value="SGG9"/>
+						<xsd:enumeration value="SGG10"/>
+						<xsd:enumeration value="SGG11"/>
+						<xsd:enumeration value="SGG12"/>
+						<xsd:enumeration value="SGG13"/>
+						<xsd:enumeration value="SGG14"/>
+						<xsd:enumeration value="SGG15"/>
+						<xsd:enumeration value="SGG16"/>
+						<xsd:enumeration value="SGG17"/>
+						<xsd:enumeration value="SGG18"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="NANumberApplicable" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="ReportableQuantity" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="EmergencyResponseGuideNumber" type="StringMax5CharType" minOccurs="0"/>
+			<xsd:element name="ThirdPartyEmergencySupportContractReference" type="StringMax17CharType" minOccurs="0"/>
+			<!-- Added for DGS Changes DEC-2022 - END-->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LocationBaseType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="LocationTypeValues"/>
+			<xsd:element name="Identifier" type="LocationIdentifierType"/>
+			<xsd:element name="Name" type="StringMin0Max256CharType" minOccurs="0"/>
+			<xsd:element name="City" type="StringTextType" minOccurs="0"/>
+			<xsd:element name="Subdivision" type="StringMin2Max70CharType" minOccurs="0"/>
+			<xsd:element name="CountryName" type="StringTextType" minOccurs="0"/>
+			<xsd:element name="CountryCode" type="ISOCountryCodeType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LocationDateTimeType">
+		<xsd:complexContent>
+			<xsd:extension base="LocationBaseType">
+				<xsd:sequence>
+					<xsd:element name="DateTime" type="LocationDateType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PackDetailsType">
+		<xsd:sequence>
+			<xsd:element name="NumberOfPackages" type="Int8Type" minOccurs="0"/>
+			<xsd:element name="PackageTypeCode" type="UNPackageCodeType" minOccurs="0"/>
+			<xsd:element name="PackageTypeDescription" type="StringTextType" minOccurs="0"/>
+			<xsd:element name="GoodGrossVolume" type="GrossVolumeType" minOccurs="0"/>
+			<xsd:element name="GoodGrossWeight" type="GrossWeightType" minOccurs="0"/>
+			<xsd:element name="GoodsNetWeight" type="GrossWeightType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="InnerPackType">
+		<xsd:complexContent>
+			<xsd:extension base="PackDetailsType">
+				<xsd:sequence>
+					<xsd:element name="InnerInnerPack" type="PackDetailsType" minOccurs="0" maxOccurs="100"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OuterPackType">
+		<xsd:complexContent>
+			<xsd:extension base="PackDetailsType">
+				<xsd:sequence>
+					<xsd:element name="InnerPack" type="InnerPackType" minOccurs="0" maxOccurs="100"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PackageDetailType">
+		<xsd:sequence>
+			<xsd:element name="OuterPack" type="OuterPackType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartiesType">
+		<xsd:complexContent>
+			<xsd:extension base="PartyTypeType">
+				<xsd:sequence>
+					<xsd:element name="Contacts" type="ContactInformationType" minOccurs="0" maxOccurs="9"/>
+					<xsd:element name="ChargeCategory" type="ChargeCategoryType" minOccurs="0" maxOccurs="6"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentPartyType">
+		<xsd:complexContent>
+			<xsd:extension base="PartyTypeType">
+				<xsd:sequence>
+					<xsd:element name="DateTime" type="EqPartyDateTimeCodeType" minOccurs="0" maxOccurs="2"/>
+					<xsd:element name="Contacts" type="EquipmentContactInformationType" minOccurs="0" maxOccurs="9"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PartyTypeType">
+		<xsd:sequence>
+			<xsd:element name="Role" type="PartyTypeValues" minOccurs="0"/>
+			<xsd:element name="Name" type="StringTextType" minOccurs="0"/>
+			<xsd:element name="Identifier" type="PartyIdentifierType" minOccurs="0"/>
+			<xsd:element name="Address" type="PartyAddressType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DateTimeCodeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:dateTime">
+				<xsd:attribute name="Type" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="Date"/>
+							<xsd:enumeration value="DateTime"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="SplitGoodsDetailsType">
+		<xsd:sequence>
+			<xsd:element name="EquipmentIdentifier" type="StringNumberValueType"/>
+			<xsd:element name="NumberOfPackages" type="Int8Type"/>
+			<xsd:element name="GrossVolume" type="GrossVolumeType" minOccurs="0"/>
+			<xsd:element name="GrossWeight" type="GrossWeightType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentIdentifierTypeWithLength">
+		<xsd:simpleContent>
+			<xsd:extension base="StringNumberValueType">
+				<xsd:attribute name="EquipmentIdentifierType" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="ActualContainerNumber"/>
+							<xsd:enumeration value="LogicalContainerNumber"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="TemperatureControlInstructionsType">
+		<xsd:sequence>
+			<xsd:element name="EquipmentControlledAtmosphere" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="SuperFreezerService" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="GensetRequired" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="Humidity" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="InTransitColdSterilization" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="NumberOfTemperatureProbes" type="StringCommentType" minOccurs="0"/>
+			<xsd:element name="NumberOfUSDProbes" type="StringCommentType" minOccurs="0"/>
+			<xsd:element name="TemperatureVariance" type="StringCommentType" minOccurs="0"/>
+			<xsd:element name="VentSetting" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Open"/>
+						<xsd:enumeration value="Closed"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConveyanceInformationType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="ConveyanceTypeValues" minOccurs="0"/>
+			<xsd:element name="Identifier" type="ConveyanceIdentifierType" minOccurs="0" maxOccurs="3"/>
+			<xsd:element name="RegistrationCountryCode" type="ISOCountryCodeType" minOccurs="0"/>
+			<xsd:element name="OperatorIdentifier" type="ConveyanceOperatorIDType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransportationDetailsType">
+		<xsd:sequence>
+			<xsd:element name="ConveyanceInformation" type="ConveyanceInformationType" minOccurs="0"/>
+			<xsd:element name="Location" type="LocationDateTimeType" minOccurs="0" maxOccurs="2"/>
+		</xsd:sequence>
+		<xsd:attribute name="TransportMode" type="TransportModeTypeValues"/>
+		<xsd:attribute name="TransportStage" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Main"/>
+					<xsd:enumeration value="OnCarriage"/>
+					<xsd:enumeration value="PreCarriage"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ShipmentIDType">
+		<xsd:simpleContent>
+			<xsd:extension base="StringTextType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="GeneralInformationType">
+		<xsd:sequence>
+			<xsd:element name="Text" type="StringMin1Max1024CharType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="InstructionTypeType">
+		<xsd:sequence>
+			<xsd:element name="Category" type="InstructionCategoryValues"/>
+			<xsd:element name="Text" type="StringMin1Max1024CharType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MessagePropertiesType">
+		<xsd:sequence>
+			<xsd:element name="ShipmentID" type="ShipmentIDType"/>
+			<xsd:element name="ContactInformation" type="ContactInformationType"/>
+			<xsd:element name="DateTime" type="DateTimeCodeType"/>
+			<xsd:element name="MovementType" type="MovementTypeType" minOccurs="0"/>
+			<xsd:element name="TransportService" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="FCL"/>
+						<xsd:enumeration value="LCL"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="PerContainerReleaseNbrReqst" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="NumberofSeaWaybills" type="Int5Type" minOccurs="0"/>
+			<xsd:element name="GeneralInformation" type="GeneralInformationType" minOccurs="0"/>
+			<xsd:element name="AmendmentJustification" type="GeneralInformationType" minOccurs="0"/>
+			<xsd:element name="CustomsClearanceInstructions" type="FilingStatusType" minOccurs="0"/>
+			<xsd:element name="CustomsDeclarationInformation" type="CustomsDeclarationInformationType" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="NatureOfCargo" type="NatureOfCargoType" minOccurs="0" maxOccurs="4"/>
+			<xsd:element name="Location" type="LocationDateTimeType" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="ReferenceInformation" type="ReferenceInformationType" minOccurs="0" maxOccurs="98"/>
+			<xsd:element name="ExportLicense" type="ExportLicenseType" minOccurs="0"/>
+			<xsd:element name="TransportationDetails" type="TransportationDetailsType" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="Party" type="PartiesType" minOccurs="2" maxOccurs="11"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MessageDetailsType">
+		<xsd:sequence>
+			<xsd:element name="GoodsDetails" type="GoodsDetailsType" minOccurs="0" maxOccurs="999"/>
+			<xsd:element name="EquipmentDetails" type="EquipmentDetailsType" minOccurs="0" maxOccurs="999"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HeaderType">
+		<xsd:sequence>
+			<xsd:element name="SenderId" type="xsd:string"/>
+			<xsd:element name="ReceiverId" type="xsd:string"/>
+			<xsd:element name="RequestDateTimeStamp" type="xsd:dateTime"/>
+			<xsd:element name="RequestMessageVersion">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="1.0"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="TransactionType" type="TransactionTypeValues"/>
+			<xsd:element name="TransactionVersion">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="2.0"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="DocumentIdentifier" type="StringTextType"/>
+			<xsd:element name="TransactionStatus">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="Original"/>
+						<xsd:enumeration value="Change"/>
+						<xsd:enumeration value="Cancel"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="TransactionSplitIndicator" type="xsd:boolean" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MessageBodyType">
+		<xsd:sequence>
+			<xsd:element name="MessageProperties" type="MessagePropertiesType"/>
+			<xsd:element name="MessageDetails" type="MessageDetailsType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Message">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Header" type="HeaderType"/>
+				<xsd:element name="MessageBody" type="MessageBodyType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

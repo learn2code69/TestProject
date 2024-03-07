@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n1:Message xmlns:n1="http://xml.inttra.com/booking/services/01">
+    <Header>
+        <SenderId>CU2100</SenderId>
+        <ReceiverId>INTTRA</ReceiverId>
+        <RequestDateTimeStamp>2024-02-23T10:55:25</RequestDateTimeStamp>
+        <RequestMessageVersion>1.0</RequestMessageVersion>
+        <TransactionType>Booking</TransactionType>
+        <TransactionVersion>2.0</TransactionVersion>
+        <DocumentIdentifier>18712MSCU-1708682125</DocumentIdentifier>
+        <TransactionStatus>Original</TransactionStatus>
+    </Header>
+    <MessageBody>
+        <MessageProperties>
+            <ShipmentID>18712MSCU</ShipmentID>
+            <ContactInformation>
+                <Type>InformationContact</Type>
+                <Name>MCDNLZEE</Name>
+                <CommunicationDetails>
+                    <Email>inttra@hellocontainer.com</Email>
+                </CommunicationDetails>
+            </ContactInformation>
+            <DateTime Type="DateTime">2024-02-23T10:55:25</DateTime>
+            <MovementType>PortToPort</MovementType>
+            <PerContainerReleaseNbrReqst>true</PerContainerReleaseNbrReqst>
+            <GeneralInformation>
+                <Text>FOODGRADE</Text>
+            </GeneralInformation>
+            <Location>
+                <Type>BookingOffice</Type>
+                <Identifier Type="UNLOC">BEANR</Identifier>
+                <Name>Antwerp</Name>
+            </Location>
+            <Location>
+                <Type>PlaceOfReceipt</Type>
+                <Identifier Type="UNLOC">BEANR</Identifier>
+                <Name>Antwerp</Name>
+                <DateTime DateType="EarliestDeparture" Type="DateTime">2024-03-19T22:00:00</DateTime>
+            </Location>
+            <Location>
+                <Type>PlaceOfDelivery</Type>
+                <Identifier Type="UNLOC">KHKOS</Identifier>
+                <Name>Sihanoukville</Name>
+                <DateTime DateType="EstimatedArrival" Type="DateTime">2024-04-26T21:00:00</DateTime>
+            </Location>
+            <ReferenceInformation Type="ShipperReferenceNumber">
+                <Value>30938 / 331014871P</Value>
+            </ReferenceInformation>
+            <ReferenceInformation Type="FreightForwarderRefNumber">
+                <Value>30938 / 331014871P</Value>
+            </ReferenceInformation>
+            <ReferenceInformation Type="ContractNumber">
+                <Value>R35623110000292</Value>
+            </ReferenceInformation>
+            <TransportationDetails TransportMode="MaritimeTransport" TransportStage="Main">
+                <ConveyanceInformation>
+                    <Type>ContainerShip</Type>
+                    <Identifier Type="VesselName">MSC CHINA</Identifier>
+                    <Identifier Type="VoyageNumber">FL410E</Identifier>
+                </ConveyanceInformation>
+                <Location>
+                    <Type>PortOfLoad</Type>
+                    <Identifier Type="UNLOC">BEANR</Identifier>
+                    <Name>Antwerp</Name>
+                    <DateTime DateType="EarliestDeparture" Type="DateTime">2024-03-19T22:00:00</DateTime>
+                </Location>
+                <Location>
+                    <Type>PortOfDischarge</Type>
+                    <Identifier Type="UNLOC">KHKOS</Identifier>
+                    <Name>Sihanoukville</Name>
+                    <DateTime DateType="EstimatedArrival" Type="DateTime">2024-04-26T21:00:00</DateTime>
+                </Location>
+            </TransportationDetails>
+            <Party>
+                <Role>Shipper</Role>
+                <Name>The Swaen B.V.</Name>
+                <Address>
+                    <StreetAddress>Hoek en Bosch 2</StreetAddress>
+                    <CityName>Kloosterzande</CityName>
+                    <PostalCode>4587 LC</PostalCode>
+                    <CountryCode>NL</CountryCode>
+                    <CountryName>Nederland</CountryName>
+                </Address>
+                <Contacts>
+                    <Type>InformationContact</Type>
+                    <Name>The Swaen B.V.</Name>
+                    <CommunicationDetails>
+                        <Phone>0031 114 681930</Phone>
+                        <Email>order@theswaen.com</Email>
+                    </CommunicationDetails>
+                </Contacts>
+            </Party>
+            <Party>
+                <Role>Consignee</Role>
+                <Name>HEINEKEN (CAMBODIA) CO., LTD.</Name>
+                <Address>
+                    <StreetAddress>PHOUM ROBOS ANGKAGNE</StreetAddress>
+                    <CityName>PHNOM PENH</CityName>
+                    <CountryCode>KH</CountryCode>
+                    <CountryName>Cambodja</CountryName>
+                </Address>
+                <Contacts>
+                    <Type>InformationContact</Type>
+                    <Name>HEINEKEN (CAMBODIA) CO., LTD.</Name>
+                    <CommunicationDetails>
+                        <Phone>855)23-722683 Fax: (855)23-723106</Phone>
+                        <Email>GEACHHEANG.PHANG@HEINEKEN.COM</Email>
+                    </CommunicationDetails>
+                </Contacts>
+            </Party>
+            <Party>
+                <Role>Forwarder</Role>
+                <Name>MCDNLZEE</Name>
+                <Identifier Type="INTTRACompanyID">1001023</Identifier>
+            </Party>
+            <Party>
+                <Role>FreightPayer</Role>
+                <Name>The Swaen B.V.</Name>
+                <Address>
+                    <StreetAddress>Hoek en Bosch 2</StreetAddress>
+                    <CityName>Kloosterzande</CityName>
+                    <PostalCode>4587 LC</PostalCode>
+                    <CountryCode>NL</CountryCode>
+                    <CountryName>Nederland</CountryName>
+                </Address>
+                <ChargeCategory ChargeType="OceanFreight">
+                    <PrepaidCollector PrepaidorCollectIndicator="PrePaid"/>
+                    <ChargeLocation>
+                        <Type>PlaceOfPayment</Type>
+                        <Identifier Type="UNLOC">BEANR</Identifier>
+                        <Name>Antwerp</Name>
+                    </ChargeLocation>
+                </ChargeCategory>
+            </Party>
+            <Party>
+                <Role>Booker</Role>
+                <Name>MCDNLZEE</Name>
+                <Identifier Type="INTTRACompanyID">1001023</Identifier>
+            </Party>
+            <Party>
+                <Role>Carrier</Role>
+                <Name>MSC</Name>
+                <Identifier Type="PartnerAlias">MSCU</Identifier>
+            </Party>
+        </MessageProperties>
+        <MessageDetails>
+            <GoodsDetails>
+                <LineNumber>1</LineNumber>
+                <PackageDetail>
+                    <OuterPack>
+                        <NumberOfPackages>640</NumberOfPackages>
+                        <PackageTypeCode>BG</PackageTypeCode>
+                        <PackageTypeDescription>Bag</PackageTypeDescription>
+                        <GoodGrossVolume UOM="MTQ">33.0000</GoodGrossVolume>
+                        <GoodGrossWeight UOM="KGM">16085.000</GoodGrossWeight>
+                    </OuterPack>
+                </PackageDetail>
+                <CommodityClassification Type="USHTS">110720</CommodityClassification>
+                <GoodDescription>11072000 mout, gebrand Roasted Malt (Black Malt)</GoodDescription>
+                <SplitGoodsDetails>
+                    <EquipmentIdentifier>50757-20DRY</EquipmentIdentifier>
+                    <NumberOfPackages>640</NumberOfPackages>
+                    <GrossVolume UOM="MTQ">33.0000</GrossVolume>
+                    <GrossWeight UOM="KGM">16085.000</GrossWeight>
+                </SplitGoodsDetails>
+            </GoodsDetails>
+            <GoodsDetails>
+                <LineNumber>2</LineNumber>
+                <PackageDetail>
+                    <OuterPack>
+                        <NumberOfPackages>640</NumberOfPackages>
+                        <PackageTypeCode>BG</PackageTypeCode>
+                        <PackageTypeDescription>Bag</PackageTypeDescription>
+                        <GoodGrossVolume UOM="MTQ">33.0000</GoodGrossVolume>
+                        <GoodGrossWeight UOM="KGM">16085.000</GoodGrossWeight>
+                    </OuterPack>
+                </PackageDetail>
+                <CommodityClassification Type="USHTS">110720</CommodityClassification>
+                <GoodDescription>11072000 mout, gebrand Roasted Malt (Black Malt)</GoodDescription>
+                <SplitGoodsDetails>
+                    <EquipmentIdentifier>50758-20DRY</EquipmentIdentifier>
+                    <NumberOfPackages>640</NumberOfPackages>
+                    <GrossVolume UOM="MTQ">33.0000</GrossVolume>
+                    <GrossWeight UOM="KGM">16085.000</GrossWeight>
+                </SplitGoodsDetails>
+            </GoodsDetails>
+            <GoodsDetails>
+                <LineNumber>3</LineNumber>
+                <PackageDetail>
+                    <OuterPack>
+                        <NumberOfPackages>640</NumberOfPackages>
+                        <PackageTypeCode>BG</PackageTypeCode>
+                        <PackageTypeDescription>Bag</PackageTypeDescription>
+                        <GoodGrossVolume UOM="MTQ">33.0000</GoodGrossVolume>
+                        <GoodGrossWeight UOM="KGM">16085.000</GoodGrossWeight>
+                    </OuterPack>
+                </PackageDetail>
+                <CommodityClassification Type="USHTS">110720</CommodityClassification>
+                <GoodDescription>11072000 mout, gebrand Roasted Malt (Black Malt)</GoodDescription>
+                <SplitGoodsDetails>
+                    <EquipmentIdentifier>50759-20DRY</EquipmentIdentifier>
+                    <NumberOfPackages>640</NumberOfPackages>
+                    <GrossVolume UOM="MTQ">33.0000</GrossVolume>
+                    <GrossWeight UOM="KGM">16085.000</GrossWeight>
+                </SplitGoodsDetails>
+            </GoodsDetails>
+            <EquipmentDetails EquipmentSupplier="CarrierSupplied">
+                <EquipmentIdentifier EquipmentIdentifierType="LogicalContainerNumber">50757-20DRY</EquipmentIdentifier>
+                <EquipmentType>
+                    <EquipmentTypeCode>22G1</EquipmentTypeCode>
+                </EquipmentType>
+                <NumberOfEquipment>1</NumberOfEquipment>
+                <ImportExportHaulage>
+                    <CargoMovementType>FCL/FCL</CargoMovementType>
+                    <HaulageArrangements>MerchantExportHaulageMerchantImportHaulage</HaulageArrangements>
+                </ImportExportHaulage>
+                <SpecialServiceRequest>FoodGradeEquipmentRequest</SpecialServiceRequest>
+            </EquipmentDetails>
+            <EquipmentDetails EquipmentSupplier="Carrier2Supplied">
+                <EquipmentIdentifier EquipmentIdentifierType="LogicalContainerNumber">50758-20DRY</EquipmentIdentifier>
+                <EquipmentType>
+                    <EquipmentTypeCode>22G1</EquipmentTypeCode>
+                </EquipmentType>
+                <NumberOfEquipment>1</NumberOfEquipment>
+                <ImportExportHaulage>
+                    <CargoMovementType>FCL/FCL</CargoMovementType>
+                    <HaulageArrangements>MerchantExportHaulageMerchantImportHaulage</HaulageArrangements>
+                </ImportExportHaulage>
+                <SpecialServiceRequest>FoodGradeEquipmentRequest</SpecialServiceRequest>
+            </EquipmentDetails>
+            <EquipmentDetails EquipmentSupplier="CarrierSupplied">
+                <EquipmentIdentifier EquipmentIdentifierType="LogicalContainerNumber">50759-20DRY</EquipmentIdentifier>
+                <EquipmentType>
+                    <EquipmentTypeCode>22G1</EquipmentTypeCode>
+                </EquipmentType>
+                <NumberOfEquipment>1</NumberOfEquipment>
+                <ImportExportHaulage>
+                    <CargoMovementType>FCL/FCL</CargoMovementType>
+                    <HaulageArrangements>MerchantExportHaulageMerchantImportHaulage</HaulageArrangements>
+                </ImportExportHaulage>
+                <SpecialServiceRequest>FoodGradeEquipmentRequest</SpecialServiceRequest>
+            </EquipmentDetails>
+        </MessageDetails>
+    </MessageBody>
+</n1:Message>
